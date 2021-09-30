@@ -1,0 +1,893 @@
+/*==============================
+=            GLOBAL            =
+==============================*/
+* {
+	font-family: 'Raleway', sans-serif;
+	margin     : 0;
+	padding    : 0;
+	box-sizing : border-box;
+}
+body {
+	font-size: 16px;
+	color: #212121;
+}
+/*MODIFICACIÓN DE LA BARRA LATERAL DE NAVEGACIÓN*/
+body::-webkit-scrollbar {
+	width: 0.625vw;
+}
+body::-webkit-scrollbar-thumb{
+	background   : #FFA500;
+	border-radius: 0.625vw;
+}
+/*MEDIDAS PARA LAS CAJAS DEL DISEÑO RESPONSIVO*/
+.contenedor {
+	position: relative;
+	margin  : auto;
+	width   : 100%;
+	height  : auto;
+}
+.fila {
+	position: relative;
+	margin  : auto;
+	width   : 100%;
+	height  : auto;
+	clear   : both;
+	display : table;
+}
+
+[class*="col-"] {
+	float : left;
+}
+/*=====  End of GLOBAL  ======*/
+
+/*=============================================================
+=            PANTALLA DE ESCRITORIO GRANDE - LARGE(lg)            =
+=============================================================*/
+@media(min-width: 1200px) {
+	.col-lg-12{width : 100%;}
+	.col-lg-11{width : 91.66666667%;}
+	.col-lg-10{width : 83.33333333%;}
+	.col-lg-9{width  : 75%;}
+	.col-lg-8{width  : 66.66666667%;}
+	.col-lg-7{width  : 58.33333333%;}
+	.col-lg-6{width  : 50%;}
+	.col-lg-5{width  : 41.66666667%;}
+	.col-lg-4{width  : 33.33333333%;}
+	.col-lg-3{width  : 25%;}
+	.col-lg-2{width  : 16.66666667%;}
+	.col-lg-1{width  : 8.33333333%;}
+	.col-lg-0{display: none;}
+}
+/*=====  End of PANTALLA DE ESCRITORIO GRANDE - LARGE(lg)  ======*/
+
+/*===============================================================
+=            PANTALLA DE ESCRITORIO MEDIANO - MEDIUM(md)            =
+===============================================================*/
+@media(max-width: 1199px) and (min-width: 992px) {
+	.col-md-12{width : 100%;}
+	.col-md-11{width : 91.66666667%;}
+	.col-md-10{width : 83.33333333%;}
+	.col-md-9{width  : 75%;}
+	.col-md-8{width  : 66.66666667%;}
+	.col-md-7{width  : 58.33333333%;}
+	.col-md-6{width  : 50%;}
+	.col-md-5{width  : 41.66666667%;}
+	.col-md-4{width  : 33.33333333%;}
+	.col-md-3{width  : 25%;}
+	.col-md-2{width  : 16.66666667%;}
+	.col-md-1{width  : 8.33333333%;}
+	.col-md-0{display: none;}
+}
+/*=====  End of PANTALLA DE ESCRITORIO MEDIANO - MEDIUM(md)  ======*/
+
+/*==================================================
+=            PANTALLA DE TABLET - SMALL(sm)            =
+==================================================*/
+@media(max-width: 991px) and (min-width: 768px) {
+	.col-sm-12{width : 100%;}
+	.col-sm-11{width : 91.66666667%;}
+	.col-sm-10{width : 83.33333333%;}
+	.col-sm-9{width  : 75%;}
+	.col-sm-8{width  : 66.66666667%;}
+	.col-sm-7{width  : 58.33333333%;}
+	.col-sm-6{width  : 50%;}
+	.col-sm-5{width  : 41.66666667%;}
+	.col-sm-4{width  : 33.33333333%;}
+	.col-sm-3{width  : 25%;}
+	.col-sm-2{width  : 16.66666667%;}
+	.col-sm-1{width  : 8.33333333%;}
+	.col-sm-0{display: none;}
+}
+/*=====  End of PANTALLA DE TABLET - SMALL(sm)  ======*/
+
+/*========================================================
+=            PANTALLA DE PHONES - EXTRA SMALL(xs)            =
+========================================================*/
+@media(max-width: 767px) {
+	.col-xs-12{width : 100%;}
+	.col-xs-11{width : 91.66666667%;}
+	.col-xs-10{width : 83.33333333%;}
+	.col-xs-9{width  : 75%;}
+	.col-xs-8{width  : 66.66666667%;}
+	.col-xs-7{width  : 58.33333333%;}
+	.col-xs-6{width  : 50%;}
+	.col-xs-5{width  : 41.66666667%;}
+	.col-xs-4{width  : 33.33333333%;}
+	.col-xs-3{width  : 25%;}
+	.col-xs-2{width  : 16.66666667%;}
+	.col-xs-1{width  : 8.33333333%;}
+	.col-xs-0{display: none;}
+}
+/*=====  End of PANTALLA DE PHONES - EXTRA SMALL(xs)  ======*/
+
+/*==============================================
+=            SECCIÓN DE LA CABECERA            =
+==============================================*/
+/*FONDO AUTOMATICO DE LA CABECERA*/
+.cabecera-menu-fondo {
+	position: absolute;
+	width   : 100%;
+	height  : 33.75vw;
+	margin  : auto;
+	overflow: hidden;
+}
+.cabecera-menu-fondo li {list-style: none;}
+.cabecera-menu-fondo ul {
+	display  : flex;
+	animation: cambio 22s infinite alternate ease;
+}
+@keyframes cambio{
+	20% {margin-left: 0;}
+	40% {margin-left: -100%;}
+	60% {margin-left: -200%;}
+	80% {margin-left: -300%;}
+	100%{margin-left: -400%;}
+}
+.cabecera-menu-fondo img {width : 100vw;}
+/*CAPA SOBRE FONDO (EFECTO OSCURO)*/
+.cabecera-menu-capa {
+	position  : absolute;
+	z-index   : 1;
+	display   : flex;
+	width     : 100%;
+	height    : 33.75vw;
+	background: rgb(0,0,0,0.5);
+}
+/*MENÚ SUPERIOR DE LA CABECERA*/
+#cabecera {
+	z-index: 100;
+	height : 33.75vw;
+}
+#cabecera-menu-contenedor {
+	position: fixed;
+}
+#cabecera-menu-opciones {
+	width   : 100%;
+	position: fixed;
+	padding : 1vw;
+	color   : #FFA500;
+}
+#cabecera-menu-opciones label {font-size: 30px;}
+#cabecera-menu-opciones img {height: 25px;}
+#cabecera-menu-opciones ul, ul li {
+	list-style: none;
+	display   : inline-block;
+}
+#cabecera-menu-opciones ul li a{
+	color          : #FFA500;
+	padding-left   : 2vw;
+	font-weight    : 800;
+	text-decoration: none;
+}
+#cabecera-menu-opciones ul li a:hover, label:hover{
+	transition: 0.5s;
+	color     : #fafafa;
+}
+#cabecera-menu-opciones img:hover {
+	filter: grayscale(100%) saturate(200%) brightness(400%);
+}
+	/*DISEÑO RESPONSIVO*/
+@media(max-width: 767px) {		
+	#cabecera-menu-opciones {padding-left: 15%;}
+	#cabecera-menu-opciones label {
+		vertical-align: 40% ;
+		font-size     : 30px;
+	}	
+	#cabecera-menu-opciones img{
+		vertical-align: 50%;
+		height        : 30px;
+	}
+	#cabecera-menu-opciones ul li {display: block;}	
+	#cabecera-menu-opciones ul li a{
+		font-size   : 15px;
+		padding-left: 4vw;
+	}
+}
+/*=====  End of SECCIÓN DE LA CABECERA  ======*/
+
+/*====================================
+=            MENÚ LATERAL            =
+====================================*/
+#btn-menu {display: none;}
+.menu-lateral-capa{
+	position  : fixed;
+	background: rgba(0,0,0,0.5);
+	width     : 100%;
+	height    : 100vh;
+	top       : 0; left: 0;
+	transition: all 500ms ease;
+	opacity   : 0;
+	visibility: hidden;
+}
+#btn-menu:checked ~ .menu-lateral-capa {
+	z-index   : 400;
+	opacity   : 1;
+	visibility: visible;
+}
+.menu-lateral {
+	width     : 250px;
+	background: #212121;
+	height    : 100vh;
+	position  : relative;
+	transition: all 500ms ease;
+	transform : translateX(-100%);
+}
+#btn-menu:checked ~ .menu-lateral-capa .menu-lateral {
+	transform: translateX(0%);
+}
+.menu-lateral nav {
+	transform: translateY(15%);
+}
+.menu-lateral nav a {
+	display        : block;
+	text-decoration: none;
+	padding        : 1.25vw;
+	color          : #FFA500;
+	font-weight    : 900;
+	border-left    : 0.3125vw solid transparent;
+	transition     : all 400ms ease;
+}
+.menu-lateral nav a:hover {
+	border-left: 0.3125vw solid #402900;
+	background : #FFA500;
+	color      : #212121;
+}
+.menu-lateral label {
+	position : absolute;
+	right    : 0.3125vw;
+	top      : 0.625vw;
+	color    : #D9C179;
+	cursor   : pointer;
+	font-size: 30px;
+}
+	/*DISEÑO RESPONSIVO*/
+@media(max-width: 767px) {
+	.menu-lateral {width: 100vw;}
+	.menu-lateral nav a {
+		font-size: 15px;
+		padding  : 2.5vw 1.25vw;
+	}
+	.menu-lateral nav a {
+		padding   : 6vw;
+		color     : #FFA500;
+		text-align: center;
+	}
+	#btn-menu:checked ~ .menu-lateral {
+		visibility: hidden;
+	}
+}
+/*=====  End of MENÚ LATERAL  ======*/
+
+/*========================================================
+=            DEVISIONES, TITULOS Y SUBTITULOS            =
+========================================================*/
+/*DIVISIÓN*/
+#division {padding: 2.2vw 0;}
+/*TITULOS*/
+#titulos h1 {
+	padding    : 2vw 4vw;
+	font-size  : 3em;
+	font-weight: 700;
+}
+/*SUBTITULOS*/
+#titulos h2 {
+	font-size  : 2em;
+	padding    : 2vw 4vw;
+	font-weight: 700;
+}
+#titulos h3 {
+	padding    : 2vw 4vw;
+	font-size  : 1.5em;
+	font-weight: 700;
+}
+#titulos p {
+	padding    : 0 4vw 2vw 4vw;
+	font-size  : 32px;
+	font-weight: 700;
+	font-family: 'Georgia', sans-serif;
+	font-style : italic;
+	font-size  : 16px;
+	font-weight: 200;
+}
+/*=====  End of DEVISIONES, TITULOS Y SUBTITULOS  ======*/
+
+/*================================================
+=            SECCIÓN APRENDE EN LÍNEA            =
+================================================*/
+#aprende-linea .aprende-contenedor{
+	display        : flex;
+	justify-content: center;
+	align-items    : center;
+}
+#aprende-linea .aprende-contenedor figure{
+	position      : relative;
+	height        : 15.625vw;
+	width         : 96%;
+	overflow      : hidden;
+	border-radius : 10px;
+	cursor        : pointer;
+}
+#aprende-linea .aprende-contenedor figure img {
+	width     : 100%;
+	height    : 100%;
+	transition: all 500ms ease-out;
+}
+#aprende-linea .aprende-contenedor figure .aprende-capa{
+	position  : absolute;
+	top       : 0;
+	width     : 100%;
+	height    : 100%;
+	background: rgb(255,165, 0, 0.9);
+	transition: all 500ms ease-out;
+	opacity   : 0;
+	visibility: hidden;
+	text-align: center;
+}
+#aprende-linea .aprende-contenedor figure:hover > a .aprende-capa {
+	opacity   : 1;
+	visibility: visible;
+}
+#aprende-linea .aprende-contenedor figure:hover > a .aprende-capa h3 {
+	margin-top   : 15%;
+	margin-bottom: 0.9375vw;
+}
+#aprende-linea .aprende-contenedor figure .aprende-capa h3 {
+	color        : #212121;
+	font-weight  : 800;
+	transition   : all 500ms ease-out;
+	text-align   : center;
+}
+#aprende-linea .aprende-contenedor figure .aprende-capa p {
+	color      : #212121;
+	font-size  : 1em;
+	font-weight: 600;
+}
+#aprende-linea .aprende-contenedor figure:hover > img {
+	transform: scale(1.3);
+}					
+			/*DISEÑOS RESPONSIVO*/
+@media (max-width: 1199px) and (min-width: 992px) {
+	#aprende-linea .aprende-contenedor figure:hover > .aprende-capa h3  {
+		margin-top   : 10% ;
+	}
+}
+@media (max-width: 991px) and (min-width: 768px) {
+	#aprende-linea .aprende-contenedor figure{
+		height: 31.25vw;		
+		margin: 1vw;
+	}
+	#aprende-linea .aprende-contenedor figure:hover > .aprende-capa h3  {
+		margin-top   : 20%;
+	}
+}
+@media (max-width: 767px) and (min-width: 365px){
+	#aprende-linea .aprende-contenedor figure{
+		margin: 1vw;
+		height: 31.25vw;
+	}
+	#aprende-linea .aprende-contenedor figure:hover > .aprende-capa h3 {
+		margin-top: 10%;
+	}
+}
+@media (max-width: 480px) {
+	#aprende-linea .aprende-contenedor figure{
+		margin: 1vw;
+		height: 33vw;
+	}
+	#aprende-linea .aprende-contenedor figure:hover > .aprende-capa h3 {
+		margin-top: 1%;
+	}
+	#aprende-linea .aprende-contenedor figure .aprende-capa h3 {
+		font-size  : 14px;
+	}
+	#aprende-linea .aprende-contenedor figure .aprende-capa p {
+		font-size  : 12px;
+	}
+}
+/*=====  End of SECCIÓN APRENDE EN LÍNEA  ======*/
+
+/*===========================================
+=            SECCIÓN DE NOTICIAS            =
+===========================================*/
+#noticias a {
+	text-decoration: none;
+}
+#noticias img {
+	padding: 0.125vw;
+	height : 12.5vw;
+	width  : 100%; 
+}
+#noticias h5 {
+	font-size     : 14px;
+	font-style    : normal;
+	font-weight   : 700;
+	line-height   : normal;
+	text-transform: uppercase;
+	color         : #212121;
+	margin        : 0;
+	opacity       : .75;
+	text-align    : right;
+	padding       : 1vw 2vw 0 2vw;
+}
+#noticias p {
+	font-size     : 14px;
+	font-style    : normal;
+	font-weight   : 700;
+	line-height   : normal;
+	text-transform: uppercase;
+	color         : #212121;
+	margin        : 0;
+	padding       : 1vw 2vw 1.0625vw 2vw;
+	text-transform: none;
+}
+	/*DISEÑOS RESPONSIVO*/
+@media (max-width: 991px) and (min-width: 768px) {
+	#noticias img {
+		height : 25vw;
+	}
+}
+@media (max-width: 767px) {
+	#noticias img {
+		visibility: hidden;
+		display   : none;
+	}
+	#noticia-especial img{
+		display   : block;
+		visibility: visible; 
+		height    : 50vw;
+		width     : 100%;
+	}
+}
+/*=====  End of SECCIÓN DE NOTICIAS  ======*/
+
+/*============================================
+=            SECCIÓN DE EDUCACIÓN            =
+============================================*/
+.cuadro-imagen, .cuadro-texto {padding-top: 4vw;}
+.cuadro-imagen img {
+	float        : right;
+	width        : 70%;
+}
+.cuadro-texto {
+	text-align   : left;
+	width        : 80%; 
+	height       : 44vw;
+	overflow     : auto;
+	list-style   : decimal; 
+	font         : 15px;
+	padding-left : 2vw;
+	margin-bottom: 4vw;
+}
+.cuadro-texto::-webkit-scrollbar {
+	width: 0.625vw;
+}
+.cuadro-texto::-webkit-scrollbar-thumb{
+	background   : #FFA500;
+	border-radius: 0.625vw;
+}
+.cuadro-texto h2 {
+	font-size     : 3em;
+	text-transform: none;
+	font-weight   : 900;
+}
+.cuadro-texto p {
+	font-size: 1em;
+	color    : #212121;
+	margin   : 1vw 0;
+}
+.cuadro-texto h3 {
+	font-size     : 2em;
+	font-weight   : 700;
+}
+.cuadro-texto ol {
+	margin: 0 0 0 2vw; 
+}
+.cuadro-texto li{
+	position       : relative;
+	display        : block;
+	padding        : .4vw .4vw .4vw 2vw;
+	margin         : .5vw 0;
+	background     : #ddd;
+	color          : #444;
+	text-decoration: none;
+	border-radius  : .3vw;
+	transition     : all .3s ease-out;   
+}
+.cuadro-texto li:hover{
+    background: #eee;
+}
+.cuadro-texto li:before{
+	content      : url(Multimedia/Imagenes/Principal/icono);
+	position     : absolute; 
+	left         : -1.3vw;
+	top          : 50%;
+	margin-top   : -1.3vw;
+	background   : #FFA500;
+	height       : 2vw;
+	width        : 2vw;
+	line-height  : 2vw;
+	border       : .3vw solid #fff;
+	text-align   : center;
+	font-weight  : bold;
+	border-radius: 2vw;
+	transition   : all .3s ease-out;
+}
+		/*DISEÑOS RESPONSIVO*/
+@media (max-width: 991px) and (min-width: 768px) {
+	.cuadro-texto {
+		font-size: 14px;
+	}
+	.cuadro-texto h2 {
+		font-size: 2.5em;
+	}
+}
+@media (max-width: 767px) {
+	.cuadro-imagen img {
+		width: 100%;
+	}
+	.cuadro-texto h2 {
+		font-size: 2.5em;
+	}
+	.cuadro-texto {
+		width  : 100%; 
+		height : 88vw;
+		font-size: 14px;
+		padding: 0 5%;
+	}
+	.cuadro-texto li:before{
+		height     : 4vw;
+		width      : 4vw;
+		line-height: 2vw;
+		margin-top   : -2.3vw;
+	}
+	.cuadro-texto li {
+		padding: .4vw .4vw .4vw 6vw;
+	}
+}
+/*=====  End of SECCIÓN DE EDUCACIÓN  ======*/
+
+/*===============================================
+=            SECCIÓN DE EXPERIENCIAS            =
+===============================================*/
+.experiencias-contenedor{
+	display        : flex;
+	justify-content: center;
+	align-items    : center;
+}
+.experiencias-contenedor figure{
+	position     : relative;
+	height       : 100%;
+	max-height   : 341px;
+	width        : 98%;
+	overflow     : hidden;
+	border-radius: 0.4375vw;
+	cursor       : pointer;
+}
+.experiencias-contenedor figure img {
+	width     : 100%;
+	height    : 100%;
+	transition: all 500ms ease-out;
+}
+.experiencias-contenedor figure .experiencias-capa{
+	position  : absolute;
+	top       : 0;
+	width     : 100%;
+	height    : 100%;
+	background: #E8B10C;
+	transition: all 500ms ease-out;
+	opacity   : 0;
+	visibility: hidden;
+	text-align: center;
+}
+#experiencias-capa-2 {
+	background:  #FF6B0D !important;
+}
+.experiencias-contenedor figure:hover > a .experiencias-capa{
+	opacity   : 1;
+	visibility: visible;
+}
+.experiencias-contenedor figure:hover > a .experiencias-capa h3 {
+	margin-top   : 10%;
+	margin-bottom: 5%;
+}
+.experiencias-contenedor figure .experiencias-capa h3 {
+	color        : #212121;
+	font-weight  : 800;
+	margin-bottom: 7.5vw;
+	transition   : all 500ms ease-out;
+	margin-top   : 1.875vw;
+	text-align   : center;
+}
+.experiencias-contenedor figure .experiencias-capa p {
+	color      : #212121;
+	font-size  : 15px;
+	font-weight: 600;
+}
+@media (max-width: 767px) {
+	.experiencias-contenedor{ 
+		padding-bottom: 1vw; 
+	}
+}
+/*=====  End of SECCIÓN DE EXPERIENCIAS  ======*/
+
+/*==============================================
+=            SECCIÓN DE INSTALACIÓN            =
+==============================================*/
+#instalacion {
+	background   : #212121;
+}
+.instalacion-slider {
+	padding-top : 1.875vw;
+	padding-left: 4.375vw;
+}
+#instalacion .slider {
+	width          : 65vw;
+	height         : 37.5vw;
+	margin-left    : 0;
+	position       : relative;
+	list-style     : none;
+	padding-top : 1.875vw;
+	padding-left: 4.375vw;
+	display        : flex;
+	justify-content: center;
+	align-items    : flex-end;
+}
+#instalacion .slider img {
+	position  : absolute;
+	top       : 0;
+	left      : 0;
+	width     : 100%;
+	height    : 100%;
+	opacity   : 0;
+	transition: all 0.7s;
+}
+#instalacion .slider input[type="radio"] {
+	display: none;
+}
+#instalacion .slider input[type="radio"]:checked ~ img {
+	opacity: 1;
+}
+#instalacion .slider input[type="radio"] + label {
+	position     : relative;
+	z-index      : 50;
+	margin       : 10px;
+	cursor       : pointer;
+	display      : block;
+	width        : 20px;
+	height       : 20px;
+	background   : #212121;
+	border-radius: 50%;
+	border       : 2px solid #FFA500;
+}
+#instalacion .slider input[type="radio"]:checked + label {
+	background: #FFA500;
+	border    : 2px solid #212121;
+}
+.ubicacion {
+	color        : white;
+	padding-right: 1.25vw;
+	padding-top  : 25vw;
+	text-align   : right;
+}
+.ubicacion h5 {
+	font-weight: bold;
+	font-size  : 1em;
+	margin     : 0;
+}
+.ubicacion h2 {
+	text-transform: none;
+	font-size     : 1.5em;
+	font-weight   : 900;
+	color         : white;
+}
+.ubicacion h3 {
+	font-family: Georgia;
+	line-height: normal;
+	font-size  : 1.1em;
+	color      : inherit;		
+}
+@media (max-width: 767px) {
+	#instalacion .slider {
+		margin: auto;
+		padding: 0;
+		width : 95vw;
+		height: 47.5vw;
+	}
+	.instalacion-slider {
+		padding: 0;
+		padding-top: 1.875vw;
+	}
+	.ubicacion {
+		padding-bottom: 2vw;
+		padding-top   : 1.875vw;
+		text-align    : center;
+		font-size: 12px;
+	}
+}
+
+/*=====  End of SECCIÓN DE INSTALACIÓN  ======*/
+
+/*=====================================
+=            PIE DE PÁGINA            =
+=====================================*/
+#footer {
+	display        : flex;
+	justify-content: flex-end;
+	align-items    : center;
+	flex-direction : column;
+	background     : #212121;
+}
+footer {
+	position       : relative;
+	width          : 100%;
+	height         : auto;
+	padding        : 3.125vw 6.25vw;
+	display        : flex;
+	justify-content: space-between;
+	flex-wrap      : wrap;
+}
+footer .container {
+	display        : flex;
+	justify-content: space-between;
+	flex-wrap      : wrap;
+	flex-direction : row;
+}
+footer .container .sec {
+	margin-right: 1.875vw;	
+}
+footer .container .sec.aboutus {
+	width: 40%;
+}
+footer .container h2 {
+	position     : relative;
+	color        : white;
+	font-weight  : 500;
+	margin-bottom: 0.9375vw;
+}
+footer .container h2:before {
+	content   : '';
+	position  : absolute;
+	bottom    : -0.3125vw;
+	left      : 0;
+	width     : 3.125vw;
+	height    : 0.125vw;
+	background: #FFA500;
+}
+footer  p {
+	color: #999;
+}
+.sci {
+	margin-top: 0.78125vw;
+	display   : flex;	
+}
+.sci li {
+	list-style: none;
+}
+.sci li a {
+	display        : inline-block;
+	width          : 2.5vw;
+	height         : 2.5vw;
+	background     : #222;
+	display        : flex;
+	justify-content: center;
+	align-items    : center;
+	margin-right   : 0.625vw;
+	text-decoration: none;
+	border-radius  : 0.25vw;
+}
+.sci li a:hover {
+	background: #FFA500;
+}
+.sci li a .fa {
+	color    :  white;
+	font-size: 20px;
+}
+.quickLinks {
+	list-style: none;
+	position: relative;
+	width   : 25%;
+}
+.quickLinks ul li {
+	list-style: none;
+}
+
+.quickLinks ul li a{
+	color          : #999;
+	text-decoration: none;
+	margin-bottom  : 0.625vw;
+	display        : inline-block;
+}
+.quickLinks ul li a:hover {
+	color: white;
+}
+.contact {
+	width       : calc(35% - 60px);
+	margin-right: 0 !important;
+}
+.contact .info {
+	position: relative;
+}
+.contact .info li {
+	display      : flex;
+	margin-bottom: 1vw;
+}
+.contact .info li span:nth-child(1) {
+	color       : white;
+	font-size   : 20px;
+	margin-right: 0.625vw;
+}
+.contact .info li span {
+	color: #999;
+}
+.contact .info li a {
+	color          : #999;
+	display        : block;
+	text-decoration: none;
+}
+.contact .info li a:hover {
+	color: white;
+}
+.copyrightText {
+	width     : 100%;
+	background: #181818;
+	padding   : 0.5vw 6.25vw;
+	text-align: center;
+	color     : #999;
+}
+	/*DISEÑOS RESPONSIVO*/
+@media (max-width: 991px) {
+	footer {
+		padding: 0 40px;
+	}
+	footer .container {
+		flex-direction: column;
+	}
+	footer .container .sec {
+		margin-right : 0;
+		margin-bottom: 10px;
+	}
+	footer .container .sec.aboutus, .quickLinks, .contact {
+		width: 100%;
+	}
+	.copyrightText {
+		padding: 8px 10px;
+	}
+}
+@media (max-width: 767px) {
+	.sci li {
+		padding-left: 10vw;
+	}
+	footer .container h2 {
+		font-size: 16px;
+	}
+	footer .container p {
+		font-size: 12px;
+	}
+	.quickLinks ul li a {
+		font-size: 12px;
+	}
+	.contact .info li a {
+		font-size: 12px;
+	}
+}
+/*=====  End of PIE DE PÁGINA  ======*/

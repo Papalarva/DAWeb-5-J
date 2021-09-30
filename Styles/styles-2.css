@@ -1,0 +1,558 @@
+/*===========================================
+=            PÁGINA DE NOSOSTROS            =
+===========================================*/
+.nosotros {
+	text-align   : left; 
+	list-style   : decimal; 
+	font-size    : 1em;
+	padding-left : 2vw;
+}
+
+.nosotros h2 {
+	font-size     : 2em;
+	text-transform: none;
+	font-weight   : 700;
+}
+.nosotros p {
+	line-height: 1.5;
+	color    : #212121;
+	margin   : 1vw 0;
+}
+.nosotros li{
+	position       : relative;
+	display        : block;
+	padding        : .4vw .4vw .4vw 2.5vw;
+	margin         : .5vw 0;
+	background     : #ddd;
+	color          : #444;
+	text-decoration: none;
+	border-radius  : .3vw;
+	transition     : all .3s ease-out;   
+}
+.nosotros li:hover{
+    background: #eee;
+}
+.nosotros li:before{
+	content      : url(Multimedia/Imagenes/Principal/icono);
+	position     : absolute; 
+	left         : -.5vw;
+	top          : 50%;
+	margin-top   : -1.3vw;
+	background   : #FFA500;
+	height       : 2vw;
+	width        : 2vw;
+	line-height  : 2vw;
+	border       : .3vw solid #fff;
+	text-align   : center;
+	font-weight  : bold;
+	border-radius: 2vw;
+	transition   : all .3s ease-out;
+}
+#historia {
+	text-align: justify;
+	list-style   : decimal; 
+	font         : 16px;
+	padding-left : 2vw;
+}
+
+#historia h2 {
+	font-size     : 2em;
+	text-transform: none;
+	font-weight   : 700;
+}
+#historia p {
+	line-height: 1.5;
+	color    : #212121;
+	margin   : 1vw 0;
+}
+#historia__img {
+	padding-top: calc(1vw + 32px);
+	padding-left : 2vw;
+	padding-right: 2vw;
+}
+#historia__img img{
+	margin-bottom: 1vw;
+	display: block;
+	max-width: 100%;
+}
+		/*DISEÑOS RESPONSIVO*/
+@media (min-width: 1509px) {
+	#historia__img #oculto-1,#historia__img #oculto-2, #historia__img #oculto-3, #historia__img #oculto-4, #historia__img #oculto-5{
+		display: none;
+	}
+}
+@media (min-width: 1334px) {
+	#historia__img #oculto-2, #historia__img #oculto-3, #historia__img #oculto-4, #historia__img #oculto-5{
+		display: none;
+	}
+}
+@media (min-width: 1228px) {
+	#historia__img #oculto-3, #historia__img #oculto-4, #historia__img #oculto-5{
+		display: none;
+	}
+}
+@media (min-width: 1122px) {
+	#historia__img #oculto-4, #historia__img #oculto-5{
+		display: none;
+	}
+}
+@media (min-width: 1031px) {
+	#historia__img #oculto-5{
+		display: none;
+	}
+}
+@media (min-width: 992px) {
+	.tablets {
+		display: none;
+	}
+}
+@media(max-width: 991px) {
+	.tablets {
+		max-width: 100%;
+		margin: auto;
+		display: block;
+	}
+	.nosotros {
+		font-size: 0.8em;
+		padding: 0 2vw;
+	}
+	#historia {
+		font-size: 0.8em;
+		padding: 0 2vw;
+	}
+}
+/*=====  End of PÁGINA DE NOSOSTROS  ======*/
+
+/*===========================================
+=            PÁGINA DE SEMESTRES            =
+===========================================*/
+#horarios {
+	font-size: 16px;
+}
+#horarios button {
+	background: white;
+	width: 100%;
+	padding: 2%;
+	font-size: 1em;
+	border: none;
+	display        : block;
+	text-decoration: none;
+	color          : black;
+	font-weight    : 700;
+	transition     : all 400ms ease;
+}
+#horarios button:hover{
+	text-decoration: underline;
+	color      : #FFA500;
+}
+#horarios section {
+	text-align: center;
+	display: none;
+}
+#horarios section {
+	animation: opacidad 1.4s;
+}
+@keyframes opacidad{
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+#horarios section a {
+	font-size: 1em;
+	padding: 1vw;
+	border-radius: 1vw;
+	background: #FFA500;
+	display: inline-block;
+	text-decoration: none;
+	color          : #212121;
+	font-weight    : 700;
+	transition     : all 700ms ease;
+}
+#horarios section a:hover {
+	color: #FFA500;
+	background: #212121;
+}
+	/*DISEÑOS RESPONSIVO*/
+@media(max-width: 1700px) {
+	#titulos-semestre h3{
+		text-align: center;
+	}
+}
+@media(max-width: 767px) {
+	#titulos h1{ 
+		font-size: 32px; 
+		text-align: left;
+	}
+	#titulos h2{ 
+		text-align: left;
+		text-align: left;
+	}
+	#titulos-semestre h3{
+		font-size  : 24px;
+	}
+}
+/*=====  End of PÁGINA DE SEMESTRES  ======*/
+
+/*===========================================
+=            PÁGINA DE CONCURSOS            =
+===========================================*/
+#concurso-texto {
+	height: 22vw;
+	padding: 1vw 1vw 2vw 3vw;
+}
+#concurso-texto h2 {
+	font-size: 2em;
+	margin-bottom: 1.25vw;
+    font-weight: 700;
+    margin-top: 0;
+}
+#concurso-texto p {
+    font-size: 1em;
+    margin-bottom: 2vw;
+}
+#concurso-texto a {
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 1vw;
+    background: #212121;
+    color: #fafafa;
+    border: solid 1px #212121;
+    align-items: center;
+    transition: 500ms all;
+    cursor: pointer;
+    border-radius: 1vw;
+    text-decoration: none;
+}
+#concurso-texto a:hover{
+	background: #fafafa;
+	color: #212121;
+}
+#concurso-imagen {
+	height: 22vw;
+}
+#concurso-imagen img {
+	height: 100%;
+	width: 100%;
+}
+#concurso-texto, #concurso-imagen {
+	animation: izquierda 2s;
+}
+@keyframes izquierda{
+	0% {margin-left: -100%;}
+	100%{margin-left: 0;}
+}
+	/*DISEÑOS RESPONSIVO*/
+@media(max-width: 1199px) {
+	#concurso-texto {
+		height: 24vw;
+	}
+	#concurso-imagen {
+		height: 24vw;
+	}
+}
+@media(max-width: 1052px) {
+	#concurso-texto {
+		height: 26vw;
+	}
+	#concurso-imagen {
+		height: 26vw;
+	}
+}
+@media(max-width: 991px) and (min-width: 768px) {
+	#concurso-texto {
+		font-size: 12px;
+	}
+}
+@media(max-width: 767px){
+	#concurso-texto {
+		font-size: 12px;
+	}
+}
+/*DISEÑO DE PARA TABLETS Y MÓVILES*/
+#oculto {
+	display: none;
+}
+.fondo-imagen {
+	position: absolute;
+	z-index: -1;
+	overflow: hidden;
+	height: auto;
+}
+.fondo-imagen img{
+	margin: 0;
+	position: absolute;
+	margin: -1vw -1vw 0 -3vw;
+	width: 100%;
+}
+.capa {
+	background: rgb(0,0,0,0.5);
+	color: white;
+}
+#enlace-pequeño{
+    background: #fafafa !important;
+    color: #212121 !important;
+    border: solid 1px #fafafa !important;
+}
+#enlace-pequeño:hover{
+	background: #212121 !important;
+	color: #fafafa !important;
+}
+@media(max-width: 991px){
+	#concurso-texto, #concurso-imagen {
+		animation: none;
+	}
+	#oculto {
+		display: block;
+		height: auto;
+	}
+	#concurso-texto {
+		height: auto;
+		padding: 1vw 1vw 0 3vw;
+		margin-bottom: 2vw;
+	}
+}
+@media(max-width: 404px) {
+	.fondo-imagen img {
+		height: 100%;
+		width: 100%;
+	}
+}
+/*=====  End of PÁGINA DE CONCURSOS  ======*/
+
+/*===============================================
+=            PÁGINA DE DEPARTAMENTOS            =
+===============================================*/
+#departamentos {
+	padding: 0 4vw 2vw 4vw;
+}
+#departamentos a{
+    color: #212121;
+    cursor: pointer;
+}
+#departamentos a:hover{
+	color: #FFA500;
+}
+#departamentos img {
+	width: 48px;
+	height: 57px;
+	float: left;
+}
+@media(max-width: 767px){
+	#departamentos {
+		font-size: 12px;
+	}
+	#departamentos h3{
+		padding: 4vw 0;
+	}
+}
+/*=====  End of PÁGINA DE DEPARTAMENTOS  ======*/
+
+/*==========================================
+=            PÁGINA DE CONTACTO            =
+==========================================*/
+#informacion-contacto {
+	height: auto;
+	padding: 1vw 1vw 2vw 3vw;
+}
+#informacion-contacto h2 {
+	font-size: 2em;
+	margin-bottom: 1.25vw;
+    font-weight: 700;
+}
+#informacion-contacto .info {
+	position: relative;
+}
+#informacion-contacto .info li {
+	display      : flex;
+	margin-bottom: 1vw;
+}
+#informacion-contacto .info li span:nth-child(1) {
+	color       : #212121;
+	font-size   : 20px;
+	margin-right: 0.625vw;
+}
+#informacion-contacto .info li span {
+	color: #212121;
+}
+#informacion-contacto .info li a {
+	color          : #212121;
+	display        : block;
+	text-decoration: none;
+	font-size: 1em;
+    font-weight: 700;
+    text-transform: uppercase;
+    align-items: center;
+    transition: 500ms all;
+    cursor: pointer;
+}
+#informacion-contacto .info li a:hover {
+	color: #FFA500;
+}
+#mapa-contacto iframe{
+	margin: auto;
+	display: block;
+	border-radius: 2vw;
+	border: 2px solid #212121;
+	width: 90%;
+	height: 28.125vw;
+}
+#derecha{
+	border-radius: 1vw;
+}
+input[type="text"], input[type="email"]{
+	border: 1px solid #ccc;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+textarea {
+	height: 80px;
+	border: 1px solid #ccc;
+	padding: 5px;
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.nombre-mensaje {
+	width: 98%;
+}
+
+.email-asunto {
+	width: 48%;
+}
+
+input[type="submit"] {
+	color: #212121;
+	font-weight: 700;
+	border: 1px solid #FFA500;
+	padding: 10px;
+	background: #FFA500;
+	border-radius: 5px;
+	transition     : all .3s ease-out; 
+}
+input[type="submit"]:hover {
+	color: #FFA500;
+	border: 1px solid #212121;
+	background: #212121;
+}
+@media(max-width: 991px) and (min-width: 768px) {
+	#mapa-contacto iframe {
+		height: 32vw;
+	}
+	#informacion-contacto {
+		font-size: 14px;
+	}
+	#titulo h2{
+		font-size: 1.2em;
+	}
+}
+@media(max-width: 605px) {
+	.email-asunto {
+		width: 99%;
+	}
+}
+@media(max-width: 767px){
+	#mapa-contacto iframe {
+		height: 247px;
+		width: 90%;
+	}
+	#informacion-contacto {
+		font-size: 12px;
+	}
+	#titulo h2{
+		font-size: 1em;
+	}
+}
+/*=====  End of PÁGINA DE CONTACTO  ======*/
+
+/*===================================================
+=            PÁGINA DE MAESTROS EN LÍNEA            =
+===================================================*/
+
+#maestros a {
+	text-decoration: none;
+}
+#maestros img {
+	display: block;
+	margin: auto;
+	width  : 80%; 
+	margin-bottom: 3vw;
+	border-radius: 1vw;
+	transition: all 500ms ease;
+}
+#maestros img:hover {
+	transform: scale(.9);
+	filter: sepia(200%) saturate(600%);
+}
+
+/*=====  End of PÁGINA DE MAESTROS EN LÍNEA  ======*/
+
+/*=========================================
+=            PÁGINA DE ALUMNOS            =
+=========================================*/
+#alumnos-contenido {
+	padding: 0 4vw 2vw 4vw;
+}
+#alumnos-contenido a{
+	font-size: 14px;
+    color: #212121;
+    cursor: pointer;
+}
+#alumnos-contenido a:hover{
+	color: #FFA500;
+}
+#alumnos-contenido img {
+	width: 48px;
+	height: 57px;
+	float: left;
+}
+#alumnos-contenido li{
+	position       : relative;
+	display        : block;
+	padding        : .4vw .4vw .4vw 2vw;
+	margin         : .5vw 0;
+	background     : #ddd;
+	color          : #444;
+	text-decoration: none;
+	border-radius  : .3vw;
+	transition     : all .3s ease-out;   
+}
+#alumnos-contenido li:hover{
+    background: #eee;
+}
+#alumnos-contenido li:before{
+	content      : url(Multimedia/Imagenes/Principal/icono);
+	position     : absolute; 
+	left         : -1.3vw;
+	top          : 50%;
+	margin-top   : -1.3vw;
+	background   : #FFA500;
+	height       : 2vw;
+	width        : 2vw;
+	line-height  : 2vw;
+	border       : .3vw solid #fff;
+	text-align   : center;
+	font-weight  : bold;
+	border-radius: 2vw;
+	transition   : all .3s ease-out;
+}
+@media(max-width: 767px){
+	#alumnos-contenido {
+		font-size: 12px;
+	}
+	#alumnos-contenido h3{
+		padding: 4vw 0;
+	}
+	#alumnos-contenido a{
+		font-size: 12px;
+	}
+	#alumnos-titulo #titulos h2{
+		font-size: 24px;
+	}
+}
+/*=====  End of PÁGINA DE ALUMNOS  ======*/
